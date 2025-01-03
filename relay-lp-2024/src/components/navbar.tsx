@@ -1,6 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 
-const Navbar = () => {
+export default function Navbar(){
   return (
     <nav className="bg-black text-white px-4 py-3 flex items-center justify-between">
       {/* RelayDigital Text */}
@@ -34,4 +36,3 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
