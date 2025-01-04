@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 export default function Navbar(){
   return (
-    <nav className="bg-black text-white px-4 py-3 flex items-center justify-between">
+    <nav className="text-white px-4 py-3 flex items-center justify-between">
       {/* RelayDigital Text */}
       <div>
         <Image
-          src="/images/relayText.svg" 
+          src="/assets/images/relayText.svg" 
           alt="RelayDigital Text"
           width={120}
           height={40}
@@ -18,7 +18,7 @@ export default function Navbar(){
       {/* Center Logo */}
       <div>
         <Image
-          src="/images/relayLogo.svg" 
+          src="/assets/images/relayLogo.svg" 
           alt="RelayDigital Logo"
           width={40}
           height={40}

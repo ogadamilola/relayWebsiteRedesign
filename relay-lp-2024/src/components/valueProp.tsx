@@ -2,7 +2,7 @@
 
 export default function ValueProp() {
   return (
-    <section className="bg-black text-white py-16">
+    <section className="text-white py-16">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold">
           ELEVATE YOUR BUSINESS, SCALE{' '}

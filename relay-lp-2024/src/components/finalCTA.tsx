@@ -2,7 +2,7 @@
 
 export default function FinalCTA (){
   return (
-    <section className="bg-black text-white py-20">
+    <section className="text-white py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center">
@@ -16,7 +16,7 @@ export default function FinalCTA (){
 
         {/* Video Section */}
         {/* We'll put the bagira video here, just placeholding for now */}
-        <div className="flex items-center justify-center w-full h-screen bg-black text-white">
+        <div className="flex items-center justify-center w-full h-screen text-white">
           <div className="aspect-w-16 aspect-h-9 w-full max-w-4xl">
             <iframe
               className="rounded-lg"

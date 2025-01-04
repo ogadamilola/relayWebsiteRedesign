@@ -1,6 +1,6 @@
 export default function Pricing() {
     return (
-      <section className="bg-black text-white py-12 px-6 md:px-12">
+      <section className="text-white py-12 px-6 md:px-12">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">PRICING</h2>
           <p className="text-gray-300 mb-12">

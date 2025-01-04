@@ -1,0 +1,44 @@
+/* Base container for all sections */
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Full width */
+  padding: 100px 0;
+  gap: 75px;
+}
+
+/* Padding sizes */
+.pad-footer {
+  padding: 100px 0 0 0;
+}
+
+.pad-hero {
+  padding: 120px 0;
+}
+
+/* Gap sizes */
+.gap-footer { 
+  gap: 10px;
+}
+
+.gap-hero {
+  gap: 25px;
+}
+
+/* Alignment utilities */
+.align-start {
+  align-items: flex-start;
+  justify-content: start;
+}
+
+.align-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.align-end {
+  align-items: flex-end;
+  justify-content: end;
+}

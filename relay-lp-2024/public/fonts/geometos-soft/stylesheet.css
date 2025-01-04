@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Geometos Soft';
+    src: url('GeometosSoft-Black.eot');
+    src: local('Geometos Soft Black'), local('GeometosSoft-Black'),
+        url('GeometosSoft-Black.eot?#iefix') format('embedded-opentype'),
+        url('GeometosSoft-Black.woff2') format('woff2'),
+        url('GeometosSoft-Black.woff') format('woff'),
+        url('GeometosSoft-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometos Soft Ultra';
+    src: url('GeometosSoft-Ultra.eot');
+    src: local('Geometos Soft Ultra'), local('GeometosSoft-Ultra'),
+        url('GeometosSoft-Ultra.eot?#iefix') format('embedded-opentype'),
+        url('GeometosSoft-Ultra.woff2') format('woff2'),
+        url('GeometosSoft-Ultra.woff') format('woff'),
+        url('GeometosSoft-Ultra.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometos Soft Extra';
+    src: url('GeometosSoft-ExtraLight.eot');
+    src: local('Geometos Soft Extra Light'), local('GeometosSoft-ExtraLight'),
+        url('GeometosSoft-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('GeometosSoft-ExtraLight.woff2') format('woff2'),
+        url('GeometosSoft-ExtraLight.woff') format('woff'),
+        url('GeometosSoft-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometos Soft';
+    src: url('GeometosSoft-Bold.eot');
+    src: local('Geometos Soft Bold'), local('GeometosSoft-Bold'),
+        url('GeometosSoft-Bold.eot?#iefix') format('embedded-opentype'),
+        url('GeometosSoft-Bold.woff2') format('woff2'),
+        url('GeometosSoft-Bold.woff') format('woff'),
+        url('GeometosSoft-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometos Soft';
+    src: url('GeometosSoft-Light.eot');
+    src: local('Geometos Soft Light'), local('GeometosSoft-Light'),
+        url('GeometosSoft-Light.eot?#iefix') format('embedded-opentype'),
+        url('GeometosSoft-Light.woff2') format('woff2'),
+        url('GeometosSoft-Light.woff') format('woff'),
+        url('GeometosSoft-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometos Soft Extra';
+    src: url('GeometosSoft-ExtraBold.eot');
+    src: local('Geometos Soft Extra Bold'), local('GeometosSoft-ExtraBold'),
+        url('GeometosSoft-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('GeometosSoft-ExtraBold.woff2') format('woff2'),
+        url('GeometosSoft-ExtraBold.woff') format('woff'),
+        url('GeometosSoft-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometos Soft';
+    src: url('GeometosSoft-Regular.eot');
+    src: local('Geometos Soft Regular'), local('GeometosSoft-Regular'),
+        url('GeometosSoft-Regular.eot?#iefix') format('embedded-opentype'),
+        url('GeometosSoft-Regular.woff2') format('woff2'),
+        url('GeometosSoft-Regular.woff') format('woff'),
+        url('GeometosSoft-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

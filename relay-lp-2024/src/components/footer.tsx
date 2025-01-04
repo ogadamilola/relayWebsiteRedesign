@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-12">
+    <footer className="text-white py-12">
       <div className="container mx-auto px-6 text-center">
         {/* Header Section */}
         <h2 className="text-4xl md:text-5xl font-bold mb-4">STAY IN THE RELAY LOOP</h2>
