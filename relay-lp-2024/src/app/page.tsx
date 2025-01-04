@@ -4,6 +4,9 @@ import FinalCTA from '@/components/finalCTA';
 import StatsSection from '@/components/statsSection';
 import Services from '@/components/services';
 import ValueProp from '@/components/valueProp';
+import Pricing from '@/components/pricing';
+import FAQSection from '@/components/FAQ';
+import Footer from '@/components/footer';
 
 export default function Home(){
   return(
@@ -17,6 +20,9 @@ export default function Home(){
       <StatsSection />
       <Services />
       <ValueProp />
+      <Pricing />
+      <FAQSection />
+      <Footer />
     </main>
   )
 }
