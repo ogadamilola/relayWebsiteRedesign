@@ -72,7 +72,7 @@ export default function Hero() {
               required
             />
           </div>
-          <button className="text-[22px] font-geometos-soft font-extrabold tracking-[-1.5px] leading-[22px] rounded-r-full bg-relaydigital-blue h-full w-1/3 sm:w-[15%] px-[1rem]">
+          <button className="text-[clamp(18px,_4vw,_22px)] font-geometos-soft font-extrabold tracking-[-1.5px] leading-[clamp(18px,_4vw,_22px)] rounded-r-full bg-relaydigital-blue h-full w-1/3 sm:w-[15%] px-[1rem]">
             Get It*
           </button>
         </div>
