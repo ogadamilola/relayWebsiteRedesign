@@ -5,6 +5,7 @@ import Image from "next/image";
 
 export default function Hero() {
   const starRating = 4.8;
+
   return (
     <section className="section pad-hero gap-hero text-center">
       <h1 className="relative text-h1 font-geometos-soft font-extrabold">
@@ -53,7 +54,7 @@ export default function Hero() {
       </p>
       <form className="relative flex flex-col align-center w-[710px] max-w-full gap-hero">
         <div className="flex flex-row align-center size-full h-[67px]">
-          <div className="flex flex-row align-center size-full w-2/3 sm:w-[85%] pl-[25px] rounded-l-full text-black text-[18px] leading-[21.6px] bg-relaydigital-grey">
+          <div className="flex flex-row align-center size-full w-2/3 sm:w-[85%] pl-[25px] rounded-l-full text-black text-[18px] leading-[21.6px] bg-relaydigital-silver">
             <span className="hidden sm:block text-[27px] leading-[27px] mr-[1rem]">
               &#128075;
             </span>
@@ -72,14 +73,31 @@ export default function Hero() {
               required
             />
           </div>
-          <button className="text-[clamp(18px,_4vw,_22px)] font-geometos-soft font-extrabold tracking-[-1.5px] leading-[clamp(18px,_4vw,_22px)] rounded-r-full bg-relaydigital-blue h-full w-1/3 sm:w-[15%] px-[1rem]">
-            Get It*
+          <button className="relative group text-[clamp(18px,_4vw,_22px)] font-geometos-soft font-extrabold tracking-[-1.5px] leading-[clamp(18px,_4vw,_22px)] rounded-r-full bg-relaydigital-blue h-full w-1/3 sm:w-[15%] px-[1rem] overflow-hidden">
+            {/* Decorative overlay */}
+            <div className="absolute -top-[50%] -translate-x-[200%] rotate-[20deg] bg-white/40 w-[45px] h-[200%] group-hover:translate-x-[400%] group-hover:opacity-100 transition-all duration-500 ease-out opacity-0 pointer-events-none" />
+
+            {/* Main content */}
+            <span className="relative flex overflow-hidden h-[1em] pointer-events-none">
+              {/* Placeholder for spacing */}
+              <span className="opacity-0">Get It*</span>
+
+              {/* Animated content */}
+              <span className="absolute w-full h-full left-1/2 -translate-x-1/2 translate-y-0 group-hover:-translate-y-[200%] group-hover:opacity-50 transition-all duration-500">
+                Get It*
+              </span>
+              <span className="absolute w-full h-full left-1/2 -translate-x-1/2 opacity-50 translate-y-[200%] group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                Get It*
+              </span>
+            </span>
           </button>
         </div>
-        <div className="size-full w-[90%] flex flex-col sm:flex-row items-center justify-between gap-y-[0.5rem] text-sub opacity-60">
+        <div className="size-full w-[90%] flex flex-col sm:flex-row items-center justify-between gap-y-[0.5rem] text-sub text-white/60">
           <span>*Don&apos;t worry, we won&apos;t spam or sell your email!</span>
-          <div className="flex pointer-events-none">
-            <div className="flex align-start">{renderStars(starRating)}</div>
+          <div className="flex align-center pointer-events-none">
+            <div className="flex w-[70px] h-[12.07px] align-center">
+              {renderStars(starRating)}
+            </div>
             &nbsp;4.8 stars out of 5,848 reviews
           </div>
         </div>

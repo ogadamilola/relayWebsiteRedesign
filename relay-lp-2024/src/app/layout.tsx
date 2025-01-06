@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "../../public/styles/globals.css";
+import "../styles/globals.css";
 import fs from "fs";
 import path from "path";
 import { geometosSoft, neueMontreal } from "./fonts";
@@ -70,7 +70,7 @@ export default function RootLayout({
   try {
     const criticalCssPath = path.join(
       process.cwd(),
-      "public",
+      "src",
       "styles",
       "critical.css"
     );

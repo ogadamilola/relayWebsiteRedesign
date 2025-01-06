@@ -32,24 +32,22 @@ export const renderStars = (rating: number): ReactElement[] => {
     if (rating > i && rating >= i + 1) {
       // Full star
       stars.push(
-        <Image
-          key={`full-${i}`}
-          alt="star"
-          src="/assets/svgs/star.svg"
-          width={12.24}
-          height={12.11}
-        />
+        <div key={`full-${i}`} className="relative w-full h-full aspect-square">
+          <Image
+            alt="star"
+            src="/assets/svgs/star.svg"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
       );
     } else if (rating > i && rating < i + 1) {
       // Partially filled star (clipped)
       stars.push(
         <div
           key={`partial-${i}`}
+          className="relative w-full h-full aspect-square overflow-hidden"
           style={{
-            position: "relative",
-            width: "12.24px",
-            height: "12.11px",
-            overflow: "hidden",
             clipPath: `inset(0 ${100 - (rating - i) * 100}% 0 0)`, // Clip from the right
           }}
         >
@@ -57,7 +55,7 @@ export const renderStars = (rating: number): ReactElement[] => {
             alt="partial star"
             src="/assets/svgs/star.svg"
             layout="fill"
-            objectFit="cover"
+            objectFit="contain"
           />
         </div>
       );

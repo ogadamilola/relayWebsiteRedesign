@@ -1,64 +1,74 @@
-export default function Pricing() {
-    return (
-      <section className="text-white py-12 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">PRICING</h2>
-          <p className="text-gray-300 mb-12">
-            To ensure we deliver top-tier quality designs on time, we work with a limited number of clients.
-          </p>
-  
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Digital Domination Package */}
-            <div className="bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">Digital Domination Package</h3>
-              <p className="text-gray-400 mb-6">
-                Designed for businesses looking to optimize their online presence with high-converting websites and data-driven marketing funnels.
-              </p>
-              <p className="text-3xl font-bold mb-4">CUSTOM</p>
-              <p className="text-gray-400 mb-6">
-                Flexible payment schedule. Tailored to your business needs.
-              </p>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-medium mb-6">
-                BOOK INTRO CALL
-              </button>
-              <ul className="text-left space-y-3 text-gray-300">
-                <li>✓ Bespoke project proposal</li>
-                <li>✓ Fully customized website and funnel development</li>
-                <li>✓ Dedicated project timeline</li>
-                <li>✓ Delivered in phases</li>
-                <li>✓ Weekly strategy sync</li>
-                <li>✓ Managed via Slack, Trello, and other project management tools</li>
-                <li>✓ Invite your team to collaborate with us in real-time</li>
-              </ul>
+"use client";
+
+interface PricingPackages {
+  title: string;
+  description: string;
+  price: string;
+  priceDetails: string;
+  button: { text: string; link: string };
+  features: string[];
+}
+
+interface PricingSectionProps {
+  packages: PricingPackages[];
+}
+
+export default function Pricing({ packages }: PricingSectionProps) {
+  return (
+    <section className="relative section text-center">
+      {/* Heading */}
+      <div className="flex flex-col gap-[10px]">
+        <h2 className="text-h2 font-geometos-soft font-extrabold">Pricing</h2>
+        <p className="text-p1 text-white/60">
+          To ensure we deliver top-tier quality designs on time, we work with a
+          limited number of clients.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:max-w-screen-xl">
+        {/* Digital Domination Package */}
+        {packages.map((packages, index) => (
+          <div
+            key={index}
+            className="group md:hover:scale-105 hover:opacity-100 md:opacity-75 flex flex-col align-start text-start text-black bg-relaydigital-silver rounded-2xl gap-6 p-8 transition-all duration-500"
+          >
+            <div className="flex flex-col gap-y-3 mb-10">
+              <h3 className="text-p1 font-geometos-soft font-extrabold">{packages.title}</h3>
+              <p className="text-p3">{packages.description}</p>
             </div>
-  
-            {/* Growth Partner Package */}
-            <div className="bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">Growth Partner Package</h3>
-              <p className="text-gray-400 mb-6">
-                Ideal for fast-growing companies and busy entrepreneurs who need a reliable partner to take over all digital marketing, lead generation, and automation tasks.
-              </p>
-              <p className="text-3xl font-bold mb-4">$10,000 - $50,000/M</p>
-              <p className="text-gray-400 mb-6">
-                Based on services required. Paid monthly. Pause or cancel anytime.
-              </p>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-medium mb-6">
-                ON REQUEST
-              </button>
-              <ul className="text-left space-y-3 text-gray-300">
-                <li>✓ End-to-end marketing automation</li>
-                <li>✓ Unlimited paid media management (Google, Facebook, LinkedIn)</li>
-                <li>✓ Full-funnel setup and continuous A/B testing</li>
-                <li>✓ SEO & content management</li>
-                <li>✓ Access to real-time performance dashboard</li>
-                <li>✓ 24/7 priority support</li>
-                <li>✓ Managed via Slack, Trello, or preferred client tools</li>
-                <li>✓ Monthly strategy sessions and growth reports</li>
-              </ul>
+            <div className="flex flex-col gap-y-3">
+              <p className="text-p1 font-geometos-soft font-extrabold">{packages.price}</p>
+              <p className="text-p3">{packages.priceDetails}</p>
             </div>
+            <button className="relative w-full group/button overflow-hidden font-geometos-soft font-extrabold text-button text-white bg-relaydigital-blue py-7 px-4 sm:px-14 rounded-2xl transition-all duration-500">
+              {/* Decorative overlay */}
+              <div className="absolute -top-[50%] rotate-[20deg] bg-white/40 w-[90px] h-[200%] group-hover/button:translate-x-[400%] group-hover/button:opacity-100 transition-all duration-500 ease-out opacity-0 pointer-events-none" />
+
+              {/* Main content */}
+              <span className="relative flex overflow-hidden h-[1em] pointer-events-none">
+                {/* Placeholder for spacing */}
+                <span className="opacity-0">{packages.button.text}</span>
+
+                {/* Animated content */}
+                <span className="absolute w-full h-full left-1/2 -translate-x-1/2 translate-y-0 group-hover/button:-translate-y-[200%] group-hover/button:opacity-50 transition-all duration-500">
+                  {packages.button.text}
+                </span>
+                <span className="absolute w-full h-full left-1/2 -translate-x-1/2 opacity-50 translate-y-[200%] group-hover/button:-translate-y-0 group-hover/button:opacity-100 transition-all duration-500">
+                  {packages.button.text}
+                </span>
+              </span>
+            </button>
+            <ul className="text-p3 space-y-3">
+              {packages.features.map((feature, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-blue-500 mr-2">✓</span>
+                  {feature}
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
-      </section>
-    );
-  }
-  
+        ))}
+      </div>
+    </section>
+  );
+}

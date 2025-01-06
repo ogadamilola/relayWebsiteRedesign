@@ -5,17 +5,19 @@
   align-items: center;
   justify-content: center;
   width: 100%; /* Full width */
-  padding: 100px 0;
-  gap: 75px;
+  padding: 50px 0;
+  gap: 35px;
 }
+
+
 
 /* Padding sizes */
 .pad-footer {
-  padding: 100px 0 0 0;
+  padding: 50px 0 0 0;
 }
 
 .pad-hero {
-  padding: 120px 0;
+  padding: 60px 0;
 }
 
 /* Gap sizes */
@@ -26,6 +28,14 @@
 .gap-hero {
   gap: 25px;
 }
+
+@media (min-width: 768px) {.section{padding: 100px 0; gap: 75px;} .pad-hero {
+  padding: 120px 0;
+}
+
+.pad-footer {
+  padding: 100px 0 0 0;
+}}
 
 /* Alignment utilities */
 .align-start {
